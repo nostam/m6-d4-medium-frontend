@@ -44,6 +44,7 @@ class ArticleItemDetails extends React.Component {
           <h4 className={"date"}>
             <div className={"d-flex"}>
               <span>{new Date(article.updatedAt).toDateString()}</span>
+
               <div>
                 <span>
                   <span>·</span>

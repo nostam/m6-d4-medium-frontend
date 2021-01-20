@@ -21,7 +21,7 @@ export default class Home extends Component {
       let res = await fetch(`${this.url}/articles`);
       if (res.ok) {
         const data = await res.json();
-        // console.log(data);
+        console.log(data);
         setTimeout(
           () => this.setState({ articles: data.articles, loading: false }),
           500
@@ -49,7 +49,7 @@ export default class Home extends Component {
   };
   componentDidMount = () => {
     this.getArticles();
-    this.getRestOfArticles();
+    // this.getRestOfArticles();
   };
   render() {
     return (
@@ -107,7 +107,7 @@ export default class Home extends Component {
                     />
                   ))}
                   {Object.keys(this.state.links) !== 0 && (
-                    <Row>
+                    <Row className="d-flex justify-content-center">
                       <Button
                         variant="outline-primary"
                         size="sm"
